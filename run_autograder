@@ -1,14 +1,22 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-import json, os, platform, shutil, subprocess
+import json
+import os
+import platform
+import shutil
+import subprocess
+
 
 def is_local():
-    return os.getcwd() != "/autograder"
+    """Checks whether the file is running locally or on Gradescope"""
+    return False if os.getcwd().startswith("/autograder") else True
+
 
 def copy_files(dir):
-    shutil.rmtree(dir, ignore_errors=True)
-    os.mkdir(dir)
-    shutil.copytree("src/main/java", f"{dir}/java")
+    shutil.rmtree(f"{dir}/tmp", ignore_errors=True)
+    os.mkdir(f"{dir}/tmp")
+    shutil.copytree(f"{dir}/src/main/java", f"{dir}/tmp/java")
+
 
 def copy_req_files(files, dir):
     for file in files:
@@ -18,46 +26,61 @@ def copy_req_files(files, dir):
         else:
             raise Exception(f"File {file} not found.")
 
+
 def init():
     if is_local():
         init_local()
     else:
         init_server()
 
+
 def init_local():
-    copy_files("tmp")
+    copy_files(".")
+
 
 def init_server():
-    copy_files("source/tmp")
+    copy_files("source")
     copy_req_files(["MyString.java"], "source/tmp")
     os.chdir("source")
+
 
 def compile():
     os.chdir("tmp")
     result = subprocess.run(
         "javac -g -encoding UTF8 -Xlint:none -d classes java/MyString.java java/HashExercise.java",
+        shell=True,
         stderr=subprocess.PIPE)
     if result.returncode != 0:
         raise Exception("Compilation error: " + result.stderr.decode("UTF-8"))
     os.chdir("..")
 
+
+def output(obj):
+    if is_local():
+        print(obj)
+    else:
+        with open("/autograder/results/results.json", "w") as text_file:
+            text_file.write(obj)
+
+
 def run():
     os.chdir("tmp/classes")
     sep = ';' if platform.system() == "Windows" else ":"
     result = subprocess.run(
-        "java -cp .;../../src/main/resources HashExercise",
+        f"java -cp .{sep}../../src/main/resources HashExercise",
+        shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
     if result.returncode != 0:
         raise Exception("Runtime error: " + result.stderr.decode("UTF-8"))
-    if is_local:
-        print(result.stdout)
-    
+    output(result.stdout.decode())
+
+
 def output_error(e):
-    message = getattr(e, 'message', repr(e))
-    data = {"score": 0, "output": message}
-    print(json.dumps(data))
-    
+    data = {"score": 0, "output": str(e)}
+    output(json.dumps(data))
+
+
 if __name__ == "__main__":
     try:
         init()
@@ -65,5 +88,3 @@ if __name__ == "__main__":
         run()
     except Exception as e:
         output_error(e)
-        
-        

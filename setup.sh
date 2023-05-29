@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo Setup is complete
+# Gradescope requires this file, but no additional setup is needed.
