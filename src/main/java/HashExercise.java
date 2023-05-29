@@ -6,8 +6,9 @@ public class HashExercise {
     private static final String RESULTS_TEMPLATE = """
             {
                 "score": 1.0,
+                "output": "Successful run with %1$d collisions",
                 "leaderboard": [
-                    {"name": "Collisions",  "value": %d, "order": "asc"}
+                    {"name": "Collisions",  "value": %1$d, "order": "asc"}
                 ]
             }
             """;

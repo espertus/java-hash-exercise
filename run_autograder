@@ -12,21 +12,6 @@ def is_local():
     return False if os.getcwd().startswith("/autograder") else True
 
 
-def copy_files(dir):
-    shutil.rmtree(f"{dir}/tmp", ignore_errors=True)
-    os.mkdir(f"{dir}/tmp")
-    shutil.copytree(f"{dir}/src/main/java", f"{dir}/tmp/java")
-
-
-def copy_req_files(files, dir):
-    for file in files:
-        path = f"/autograder/submission/{file}"
-        if os.path.exists(path):
-            shutil.copy(path, f"{dir}/java")
-        else:
-            raise Exception(f"File {file} not found.")
-
-
 def init():
     if is_local():
         init_local()
@@ -44,6 +29,21 @@ def init_server():
     os.chdir("source")
 
 
+def copy_files(dir):
+    shutil.rmtree(f"{dir}/tmp", ignore_errors=True)
+    os.mkdir(f"{dir}/tmp")
+    shutil.copytree(f"{dir}/src/main/java", f"{dir}/tmp/java")
+
+
+def copy_req_files(files, dir):
+    for file in files:
+        path = f"/autograder/submission/{file}"
+        if os.path.exists(path):
+            shutil.copy(path, f"{dir}/java")
+        else:
+            raise Exception(f"File {file} not found.")
+
+
 def compile():
     os.chdir("tmp")
     result = subprocess.run(
@@ -53,14 +53,6 @@ def compile():
     if result.returncode != 0:
         raise Exception("Compilation error: " + result.stderr.decode("UTF-8"))
     os.chdir("..")
-
-
-def output(obj):
-    if is_local():
-        print(obj)
-    else:
-        with open("/autograder/results/results.json", "w") as text_file:
-            text_file.write(obj)
 
 
 def run():
@@ -74,6 +66,14 @@ def run():
     if result.returncode != 0:
         raise Exception("Runtime error: " + result.stderr.decode("UTF-8"))
     output(result.stdout.decode())
+
+
+def output(obj):
+    if is_local():
+        print(obj)
+    else:
+        with open("/autograder/results/results.json", "w") as text_file:
+            text_file.write(obj)
 
 
 def output_error(e):
