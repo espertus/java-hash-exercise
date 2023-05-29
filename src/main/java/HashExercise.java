@@ -73,30 +73,4 @@ public class HashExercise {
             outputFailure("Unexpected error: " + e.getMessage());
         }
     }
-
-    static class HashSet<T> {
-        private final int capacity;
-        private final List<T>[] elements;
-        private int numCollisions;
-
-        public HashSet(int capacity) {
-            this.capacity = capacity;
-            elements = (List<T>[]) (new List[capacity]);
-            numCollisions = 0;
-        }
-
-        public void add(T value) {
-            int index = Math.abs(value.hashCode() % capacity);
-            if (elements[index] == null) {
-                elements[index] = new LinkedList<T>();
-            } else {
-                numCollisions++;
-            }
-            elements[index].add(value);
-        }
-
-        public int getNumCollisions() {
-            return numCollisions;
-        }
-    }
 }

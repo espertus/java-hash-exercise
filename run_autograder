@@ -62,7 +62,7 @@ def compile():
     """
     os.chdir("tmp")
     result = subprocess.run(
-        "javac -g -encoding UTF8 -Xlint:none -d classes java/MyString.java java/HashExercise.java",
+        "javac -g -encoding UTF8 -Xlint:none -d classes java/MyString.java java/HashExercise.java java/HashSet.java",
         shell=True,
         stderr=subprocess.PIPE)
     if result.returncode != 0:

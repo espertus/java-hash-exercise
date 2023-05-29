@@ -9,7 +9,7 @@ University. Its purpose is to:
 ## Classroom use
 
 The recommended usage is:
-1. Going over the implementation of [HashSet.java](src/main/java/HashExercise.java)
+1. Going over the implementation of [HashSet.java](src/main/java/HashSet.java)
    with students, showing them how the `hashCode()` function is used.
 2. Discussing the contract for `hashCode()`, which requires `equals()` objects
    to have equal hash codes. Point out that this is a legal implementation but
