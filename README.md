@@ -22,8 +22,8 @@ The recommended usage is:
 ```java
 @Override
 public int hashCode(){
-        return 42;
-        }
+    return 42;
+}
 ```
 
 3. Providing students with [MyString.java](src/main/java/MyString.java) and
