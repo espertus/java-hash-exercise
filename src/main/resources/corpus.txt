@@ -1,70 +1,317 @@
-Susan Rodger
-Barbara Ericson
-Stephen Edwards
-Lauri Malmi
-Mark Guzdial
-Tim Bell
-Gail Chapman
-Jan Cuny
-Mark Allen Weiss
-Robert Panoff
-Michael K�lling
-Harold (Hal) Abelson
-Matthias Felleisen
-Sally Fincher
-Elliot Koffman
-Randy Pausch
-Judith Gal-Ezer
-John Hughes
-Richard Pattis
-Kim Bruce
-Mordechai Ben-Ari
-Eric Roberts
-Elliot Soloway
-Allen B. Tucker
-Andries van Dam
-Peter Denning
-William Wulf
-Andrew Tannenbaum
-Nell Dale
-Robert Aiken
-Norman Gibbs
-Alan Kay
-Daniel McCracken
-David Gries
-Edsger Dijkstra
-Grace Murray Hopper
-Niklaus Wirth
-Donald Knuth
-Elliot Organick
-Karl Karlstrom
-Alan Perlis
-William Atchison
-Ren�e McCauley
-Simon
-Cary Laxer
-Alison Clear
-Gloria Childress Townsend
-Eric Roberts
-Mats Daniels
-Barbara Boucher Owens
-Frank Young
-Andrea Lawrence
-Henry Walker
-Jane Prey
-Gordon Davies
-Peter J. Denning
-Michael Clancy
-Dennis J. Frailey
-John Impagliazzo
-Joyce Currie Little
-Andrew McGettrick
-Bruce Klein
-Harriet Taylor
-A. Joe Turner
-Lillian N. (Boots) Cassel
-James Miller
-Bob Aiken
-Della Bonnette
-Dick Austing
-
+CS 0100 – Trends and Applications in Artificial Intelligence and Machine Learning
+CS 0130 – Seminar in Professional Communication
+CS 0141 – Introduction to Deep Learning
+CS 0142 – Product Design with Machine Learning
+CS 0180 – Special Topics in Professional Development
+CS 0200 – Designing Databases
+CS 0210 – Introduction to Search
+CS 0500 – Artificial Intelligence and Machine Learning for Strategic Planning
+CS 0510 – Communicating Data: Visualization, Dashboards, and Stories
+CS 1100 – Computer Science and Its Applications
+CS 1101 – Lab for CS 1100
+CS 1200 – First Year Seminar
+CS 1210 – Professional Development for Khoury Co-op
+CS 1800 – Discrete Structures
+CS 1802 – Seminar for CS 1800
+CS 1990 – Elective
+CS 2500 – Fundamentals of Computer Science 1
+CS 2501 – Lab for CS 2500
+CS 2510 – Fundamentals of Computer Science 2
+CS 2511 – Lab for CS 2510
+CS 2800 – Logic and Computation
+CS 2810 – Mathematics of Data Models
+CS 2963 – Topics
+CS 2990 – Elective
+CS 2991 – Research in Computer Science
+CS 2992 – Research
+CS 3000 – Algorithms and Data
+CS 3001 – Recitation for CS 3000
+CS 3200 – Database Design
+CS 3500 – Object-Oriented Design
+CS 3501 – Lab for CS 3500
+CS 3520 – Programming in C++
+CS 3540 – Game Programming
+CS 3650 – Computer Systems
+CS 3700 – Networks and Distributed Systems
+CS 3800 – Theory of Computation
+CS 3950 – Introduction to Computer Science Research
+CS 3990 – Elective
+CS 4050 – Values and Sociotechnical Algorithmic Systems
+CS 4097 – Mixed Reality
+CS 4100 – Artificial Intelligence
+CS 4120 – Natural Language Processing
+CS 4150 – Game Artificial Intelligence
+CS 4180 – Reinforcement Learning
+CS 4200 – Database Internals
+CS 4300 – Computer Graphics
+CS 4400 – Programming Languages
+CS 4410 – Compilers
+CS 4500 – Software Development
+CS 4520 – Mobile Application Development
+CS 4530 – Fundamentals of Software Engineering
+CS 4550 – Web Development
+CS 4610 – Robotic Science and Systems
+CS 4700 – Network Fundamentals
+CS 4710 – Mobile and Wireless Systems
+CS 4730 – Distributed Systems
+CS 4805 – Fundamentals of Complexity Theory
+CS 4810 – Advanced Algorithms
+CS 4820 – Computer-Aided Reasoning
+CS 4830 – System Specification, Verification, and Synthesis
+CS 4850 – Building Game Engines
+CS 4950 – Computer Science Research Seminar
+CS 4955 – Computer Science Teaching Seminar
+CS 4970 – Junior/Senior Honors Project 1
+CS 4971 – Junior/Senior Honors Project 2
+CS 4973 – Topics in Computer Science
+CS 4990 – Elective
+CS 4991 – Research
+CS 4992 – Directed Study
+CS 4993 – Independent Study
+CS 4998 – Research
+CY 2550 – Foundations of Cybersecurity
+CY 2990 – Elective
+CY 2991 – Research in Cybersecurity
+CY 3740 – Systems Security
+CY 3990 – Elective
+CY 4170 – The Law, Ethics, and Policy of Data and Digital Technologies
+CY 4740 – Network Security
+CY 4760 – Security of Wireless and Mobile Systems
+CY 4770 – Cryptography
+CY 4930 – Cybersecurity Capstone
+CY 4970 – Junior/Senior Honors Project 1
+CY 4971 – Junior/Senior Honors Project 2
+CY 4973 – Topics in Cybersecurity
+DS 1990 – Elective
+DS 2000 – Programming with Data
+DS 2001 – Data Science Programming Practicum
+DS 2500 – Intermediate Programming with Data
+DS 2501 – Lab for DS 2500
+DS 2990 – Elective
+DS 2991 – Research in Data Science
+DS 3000 – Foundations of Data Science
+DS 3500 – Advanced Programming with Data
+DS 3990 – Elective
+DS 4200 – Information Presentation and Visualization
+DS 4300 – Large-Scale Information Storage and Retrieval
+DS 4400 – Machine Learning and Data Mining 1
+DS 4420 – Machine Learning and Data Mining 2
+DS 4440 – Practical Neural Networks
+DS 4970 – Junior/Senior Honors Project 1
+DS 4971 – Junior/Senior Honors Project 2
+DS 4973 – Topics in Data Science
+DS 4990 – Elective
+DS 4991 – Research
+DS 4992 – Directed Study
+DS 4993 – Independent Study
+DS 4994 – Internship
+DS 4996 – Experiential Education Directed Study
+DS 4997 – Data Science Thesis
+DS 4998 – Data Science Thesis Continuation
+IS 1300 – Knowledge in a Digital World
+IS 1500 – Introduction to Web Development
+IS 1990 – Elective
+IS 2000 – Principles of Information Science
+IS 2990 – Elective
+IS 2991 – Research in Information Science
+IS 3500 – Information System Design and Development
+IS 3990 – Elective
+IS 4200 – Information Retrieval
+IS 4300 – Human Computer Interaction
+IS 4800 – Empirical Research Methods
+IS 4990 – Elective
+IS 4991 – Research
+CS 5001 – Intensive Foundations of Computer Science
+CS 5002 – Discrete Structures
+CS 5003 – Recitation for CS 5001
+CS 5004 – Object-Oriented Design
+CS 5005 – Recitation for CS 5004
+CS 5006 – Algorithms
+CS 5007 – Computer Systems
+CS 5008 – Data Structures, Algorithms, and Their Applications within Computer Systems
+CS 5009 – Recitation for CS 5008
+CS 5010 – Programming Design Paradigm
+CS 5011 – Recitation for CS 5010
+CS 5081 – Accessibility and Inclusiveness in Human-Computer Interaction
+CS 5097 – Mixed Reality
+CS 5100 – Foundations of Artificial Intelligence
+CS 5150 – Game Artificial Intelligence
+CS 5170 – Artificial Intelligence for Human-Computer Interaction
+CS 5180 – Reinforcement Learning and Sequential Decision Making
+CS 5200 – Database Management Systems
+CS 5310 – Computer Graphics
+CS 5330 – Pattern Recognition and Computer Vision
+CS 5335 – Robotic Science and Systems
+CS 5340 – Computer/Human Interaction
+CS 5400 – Principles of Programming Language
+CS 5500 – Foundations of Software Engineering
+CS 5520 – Mobile Application Development
+CS 5600 – Computer Systems
+CS 5610 – Web Development
+CS 5700 – Fundamentals of Computer Networking
+CS 5800 – Algorithms
+CS 5850 – Building Game Engines
+CS 5933 – Advanced Computer Science Topics for Teachers
+CS 5934 – Introduction to Inclusive Computer Science Teaching
+CS 5963 – Topics
+CS 5964 – Projects for Professionals
+CS 5965 – Engaging with Industry Partners for Rising Professionals
+CS 5976 – Directed Study
+CS 6120 – Natural Language Processing
+CS 6140 – Machine Learning
+CS 6200 – Information Retrieval
+CS 6220 – Data Mining Techniques
+CS 6240 – Large-Scale Parallel Data Processing
+CS 6350 – Empirical Research Methods
+CS 6410 – Compilers
+CS 6510 – Advanced Software Development
+CS 6620 – Fundamentals of Cloud Computing
+CS 6650 – Building Scalable Distributed Systems
+CS 6710 – Wireless Network
+CS 6760 – Privacy, Security, and Usability
+CS 6949 – Career Preparation
+CS 6954 – Co-op Work Experience – Half-Time
+CS 6955 – Co-op Work Experience Abroad – Half-Time
+CS 6962 – Elective
+CS 6964 – Co-op Work Experience
+CS 6965 – Co-op Work Experience Abroad
+CS 7140 – Advanced Machine Learning
+CS 7150 – Deep Learning
+CS 7180 – Special Topics in Artificial Intelligence
+CS 7200 – Statistical Methods for Computer Science
+CS 7240 – Principles of Scalable Data Management: Theory, Algorithms, and Database Systems
+CS 7250 – Information Visualization: Theory and Applications
+CS 7280 – Special Topics in Database Management
+CS 7290 – Special Topics in Data Science
+CS 7295 – Special Topics in Data Visualization
+CS 7300 – Empirical Research Methods for Human Computer Interaction
+CS 7340 – Theory and Methods in Human Computer Interaction
+CS 7380 – Special Topics in Graphics/Image Processing
+CS 7390 – Special Topics in Human-Centered Computing
+CS 7430 – Formal Specification, Verification, and Synthesis
+CS 7480 – Special Topics in Programming Language
+CS 7485 – Special Topics in Formal Methods
+CS 7580 – Special Topics in Software Engineering
+CS 7600 – Intensive Computer Systems
+CS 7610 – Foundations of Distributed Systems
+CS 7670 – Seminar in Computer Systems
+CS 7675 – Master’s Research
+CS 7680 – Special Topics in Computer Systems
+CS 7800 – Advanced Algorithms
+CS 7805 – Complexity Theory
+CS 7810 – Foundations of Cryptography
+CS 7880 – Special Topics in Theoretical Computer Science
+CS 7930 – Effective Scientific Writing in Computer Science
+CS 7962 – Elective
+CS 7976 – Directed Study
+CS 7980 – Capstone
+CS 7986 – Research
+CS 7990 – Thesis
+CS 7996 – Thesis Continuation – Half-Time
+CS 8674 – Master’s Project
+CS 8948 – Research Work Experience – Half-Time
+CS 8949 – Research Work Experience
+CS 8982 – Readings
+CS 8986 – Research
+CS 9000 – PhD Candidacy Achieved
+CS 9990 – Dissertation Term 1
+CS 9991 – Dissertation Term 2
+CS 9996 – Dissertation Continuation
+CY 5001 – Cyberspace Technology and Applications
+CY 5010 – Foundations of Information Assurance
+CY 5061 – Cloud Security
+CY 5062 – Introduction to IoT Security
+CY 5120 – Applied Cryptography
+CY 5130 – Computer System Security
+CY 5150 – Network Security Practices
+CY 5200 – Security Risk Management and Assessment
+CY 5210 – Information System Forensics
+CY 5240 – Cyberlaw: Privacy, Ethics, and Digital Rights
+CY 5250 – Decision Making for Critical Infrastructure
+CY 5770 – Software Vulnerabilities and Security
+CY 5976 – Directed Study
+CY 5978 – Independent Study
+CY 5984 – Research
+CY 6200 – Special Topics in IT Security Governance, Risk, and Compliance
+CY 6240 – Special Topics in Privacy Law
+CY 6720 – Machine Learning in Cybersecurity and Privacy
+CY 6740 – Network Security
+CY 6760 – Wireless and Mobile Systems Security
+CY 6962 – Elective
+CY 7790 – Special Topics in Security and Privacy
+CY 7900 – Capstone Project
+CY 7962 – Elective
+CY 7990 – Thesis
+CY 7995 – Project
+CY 8982 – Readings
+CY 9000 – PhD Candidacy Achieved
+CY 9990 – Dissertation Term 1
+CY 9991 – Dissertation Term 2
+CY 9996 – Dissertation Continuation
+DS 5010 – Introduction to Programming for Data Science
+DS 5020 – Introduction to Linear Algebra and Probability for Data Science
+DS 5110 – Introduction to Data Management and Processing
+DS 5220 – Supervised Machine Learning and Learning Theory
+DS 5230 – Unsupervised Machine Learning and Data Mining
+DS 5500 – Capstone: Applications in Data Science
+DS 6962 – Elective
+DS 7990 – Thesis
+DS 7995 – Project
+DS 8982 – Readings
+GSND 5110 – Game Design and Analysis
+GSND 5111 – Seminar for GSND 5110
+GSND 5112 – Recitation for GSND 5110
+GSND 5122 – Business Models in the Game Industry
+GSND 5130 – Mixed Research Methods for Games
+GSND 5131 – Recitation for GSND 5130
+GSND 6000 – Advanced Topics in Game Design
+GSND 6001 – Advanced Topics in Game Science
+GSND 6225 – Applied Game Design
+GSND 6240 – Exploratory Concept Design
+GSND 6250 – Spatial and Temporal Design
+GSND 6320 – Psychology of Play
+GSND 6330 – Player Experience
+GSND 6331 – Recitation for GSND 6330
+GSND 6340 – Biometrics for Design
+GSND 6350 – Data-Driven Player Modeling
+GSND 6460 – Generative Game Design
+GSND 6962 – Elective
+GSND 6984 – Research
+GSND 7976 – Directed Study
+GSND 7986 – Research
+GSND 7990 – Thesis
+GSND 7995 – Games Project
+GSND 7996 – Thesis Continuation – Half-Time
+HINF 5101 – Introduction to Health Informatics and Health Information Systems
+HINF 5102 – Data Management in Healthcare
+HINF 5105 – The American Healthcare System
+HINF 5110 – Global Health Information Management
+HINF 5200 – Theoretical Foundations in Personal Health Informatics
+HINF 5300 – Personal Health Interface Design and Development
+HINF 5301 – Evaluating Health Technologies
+HINF 5407 – Business Application of Decision Support in Healthcare
+HINF 5976 – Directed Study
+HINF 6201 – Organizational Behavior, Work Flow Design, and Change Management
+HINF 6202 – Business of Healthcare Informatics
+HINF 6205 – Creation and Application of Medical Knowledge
+HINF 6215 – Project Management
+HINF 6220 – Database Design, Access, Modeling, and Security
+HINF 6240 – Improving the Patient Experience through Informatics
+HINF 6335 – Management Issues in Healthcare Information Technology
+HINF 6345 – Design for Usability in Healthcare
+HINF 6350 – Public Health Surveillance and Informatics
+HINF 6355 – Interoperability Key Standards in Health Informatics
+HINF 6400 – Introduction to Health Data Analytics
+HINF 6404 – Patient Engagement Informatics and Analytics
+HINF 6405 – Quantifying the Value of Informatics
+HINF 6962 – Elective
+HINF 7701 – Health Informatics Capstone Project
+HINF 7976 – Directed Study
+HINF 7990 – Thesis
+HINF 8982 – Readings
+HINF 8984 – Research
+HINF 8986 – Research
+HINF 9000 – PhD Candidacy Achieved
+HINF 9990 – Dissertation Term 1
+HINF 9991 – Dissertation Term 2
+HINF 9996 – Dissertation Continuation
