@@ -2,17 +2,24 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'org.example'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
-test {
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.12.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.12.2'
+}
+
+tasks.named('test', Test) {
     useJUnitPlatform()
 }
