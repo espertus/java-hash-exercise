@@ -63,9 +63,6 @@ Here are ideas for customizing the assignment:
 1. Replacing the corpus (currently a list of winners of SIGCSE prizes) with
    another corpus, such as the names of your students.
 2. De-generifying `HashSet` to simplify the code.
-3. Varying the capacity of the hash set to distinguish among different types
-   of collisions, such as those due to the number buckets and those due to
-   identical `hashCode()` values.
 
 ## Recommended Reading
 
