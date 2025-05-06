@@ -1,3 +1,5 @@
+Mitchell Resnick
+Michael Caspersen
 Susan Rodger
 Barbara Ericson
 Stephen Edwards
@@ -8,7 +10,7 @@ Gail Chapman
 Jan Cuny
 Mark Allen Weiss
 Robert Panoff
-Michael K�lling
+Michael Kölling
 Harold (Hal) Abelson
 Matthias Felleisen
 Sally Fincher
@@ -40,7 +42,9 @@ Elliot Organick
 Karl Karlstrom
 Alan Perlis
 William Atchison
-Ren�e McCauley
+Manuel A. Pérez-Quiñones
+Chris Stephenson
+Renée McCauley
 Simon
 Cary Laxer
 Alison Clear
