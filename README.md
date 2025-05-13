@@ -12,19 +12,19 @@ If you would like to customize the assignment:
 
 ## Creating the Gradescope assignment
 
-Follow this video description, which can be summarized as follows:
+Follow this [video](https://go.screenpal.com/watch/cThIc5nQ7fK),
+which can be summarized as follows:
 
-1. Download `autograder.zip` from the latest release or build your zip file
-   by cloning this repository and running `./make_autograder.sh`.
-2. Create
-   a [Programming Assignment](https://help.gradescope.com/article/ujutnle52h-instructor-assignment-programming)
+1. Create a [Programming Assignment](https://help.gradescope.com/article/ujutnle52h-instructor-assignment-programming)
    on Gradescope, enabling a leaderboard.
-3. Configuring the autograder, which includes:
+2. Configure the autograder, which includes:
     1. Selecting the latest Ubuntu image.
     2. Selecting JDK 17.
     3. Uploading `autograder.zip`.
     4. Clicking on `Update Autograder`.
-    5. Uploading a test submission from a `sample-submissions`subdirectory.
+    5. Waiting until "build complete" is displayed.
+    6. Uploading test submissions from a `sample-submissions` subdirectory. Each submission must be
+       uploaded from a different Gradescope account.
 
 ## Updates
 
