@@ -47,7 +47,7 @@ which can be summarized as follows:
 2. Create
    a [Programming Assignment](https://help.gradescope.com/article/ujutnle52h-instructor-assignment-programming)
    on Gradescope, enabling a leaderboard.
-3. Configuring the autograder, which includes:
+3. Configure the autograder, which includes:
     1. Selecting the latest Ubuntu image.
     2. Selecting JDK 17.
     3. Uploading `autograder.zip`.
@@ -61,7 +61,8 @@ which can be summarized as follows:
 Here are ideas for customizing the assignment:
 
 1. Replacing the corpus (currently a list of winners of SIGCSE prizes) with
-   another corpus, such as the names of your students.
+   another corpus, such as the names of your students or a list of courses
+   offered at your university.
 2. De-generifying `HashSet` to simplify the code.
 
 ## Recommended Reading
