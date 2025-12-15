@@ -15,9 +15,12 @@ class MyString {
 
     @Override
     public int hashCode() {
-        // Try to make different strings return different values.
-        // You must not call any other implementation of hashCode().
         return 37;
+    }
+
+    // This is used only for the GitHub Classroom implementation, not Gradescope.
+    public static String getPseudonym() {
+        return "constant";
     }
 
     public static void main(String[] args) {

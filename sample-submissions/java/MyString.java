@@ -18,6 +18,11 @@ class MyString {
         return s.hashCode();
     }
 
+    // This is used only for the GitHub Classroom implementation, not Gradescope.
+    public static String getPseudonym() {
+        return "Java";
+    }
+
     public static void main(String[] args) {
         String[] testStrings = {"hello", "world"};
         for (String s : testStrings) {

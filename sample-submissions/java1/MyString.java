@@ -37,6 +37,11 @@ class MyString {
         return h;
     }
 
+    // This is used only for the GitHub Classroom implementation, not Gradescope.
+    public static String getPseudonym() {
+        return "Java 1";
+    }
+
     public static void main(String[] args) {
         String[] testStrings = {"hello", "world"};
         for (String s : testStrings) {

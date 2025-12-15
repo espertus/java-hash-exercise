@@ -31,8 +31,10 @@ final class MyString {
      * Returns the pseudonym to display on the leaderboard.
      * Pseudonyms may be up to 30 characters long and should
      * contain only alphanumeric characters, space, underscore, and hyphen.
+     *
+     * @return the pseudonym for the leaderboard
      */
-    public static String pseudonym() {
+    public static String getPseudonym() {
         return "CHANGEME"; // Replace "CHANGEME" with your desired pseudonym
     }
 

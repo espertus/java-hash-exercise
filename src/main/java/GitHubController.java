@@ -21,7 +21,7 @@ public class GitHubController extends AbstractController {
   }
 
   private static boolean validatePseudonym() throws IllegalArgumentException {
-    return validatePseudonym(MyString.pseudonym(), System.out, System.err);
+    return validatePseudonym(MyString.getPseudonym(), System.out, System.err);
   }
 
   // If the pseudonym is valid, this outputs it and returns true.
