@@ -62,7 +62,7 @@ def compile():
     """
     os.chdir("tmp")
     result = subprocess.run(
-        "javac -g -encoding UTF8 -Xlint:none -d classes java/MyString.java java/HashExercise.java java/HashSet.java",
+        "javac -g -encoding UTF8 -Xlint:none -d classes java/MyString.java java/GradescopeController.java java/HashSet.java",
         shell=True,
         stderr=subprocess.PIPE)
     if result.returncode != 0:
@@ -80,7 +80,7 @@ def run():
     os.chdir("tmp/classes")
     sep = ';' if platform.system() == "Windows" else ":"
     result = subprocess.run(
-        f"java -cp .{sep}../../src/main/resources HashExercise",
+        f"java -cp .{sep}../../src/main/resources GradescopeController",
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
