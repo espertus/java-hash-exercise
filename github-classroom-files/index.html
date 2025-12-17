@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hash Function Leaderboard</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem; }
+    h1 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 0.75rem; border-bottom: 1px solid #ddd; text-align: left; }
+    .gold { background: #ffd700; }
+    .silver { background: #c0c0c0; }
+    .bronze { background: #cd7f32; }
+  </style>
+</head>
+<body>
+<h1>🏆 Hash Function Leaderboard</h1>
+<p style="text-align: center;">Lower collisions = better hash function</p>
+<table>
+  <thead><tr><th>Rank</th><th>Pseudonym</th><th>Collisions</th></tr></thead>
+  <tbody id="board"></tbody>
+</table>
+<script>
+  fetch('leaderboard.json')
+  .then(r => r.json())
+  .then(data => {
+    data.sort((a, b) => a.collisions - b.collisions);
+
+    const tbody = document.getElementById('board');
+    const medals = ['gold', 'silver', 'bronze'];
+
+    let rank = 1;
+    data.forEach((entry, i) => {
+      // Update rank only if score differs from previous
+      if (i > 0 && entry.collisions > data[i - 1].collisions) {
+        rank = i + 1;
+      }
+
+      const row = tbody.insertRow();
+      if (rank <= 3) {
+        row.className = medals[rank - 1];
+      }
+      row.innerHTML = `<td>${rank}</td><td>${entry.pseudonym}</td><td>${entry.collisions}</td>`;
+    });
+  });
+</script>
+</body>
+</html>

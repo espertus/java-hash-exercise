@@ -1,0 +1,126 @@
+# .github/workflows/evaluate.yml
+name: Evaluate Submission
+
+on:
+  repository_dispatch:
+    types: [submission]
+
+permissions:
+  contents: write
+
+env:
+  LEADERBOARD_URL: https://your-org.github.io/hash-contest-leaderboard/
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Fetch student's MyString.java
+        run: |
+          curl -sf \
+            -H "Authorization: Bearer ${{ secrets.CLASSROOM_TOKEN }}" \
+            -H "Accept: application/vnd.github.raw" \
+            "https://api.github.com/repos/${{ github.event.client_payload.repo }}/contents/MyString.java" \
+            -o src/MyString.java
+
+      - name: Compile
+        id: compile
+        run: |
+          mkdir -p out
+          if ! javac -d out src/*.java 2>err.txt; then
+            MSG=$(cat err.txt)
+            echo "error<<EOF" >> $GITHUB_OUTPUT
+            echo "$MSG" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Run evaluation
+        id: eval
+        if: steps.compile.outcome == 'success'
+        run: |
+          cp corpus.txt out/
+          cd out
+
+          if ! OUTPUT=$(timeout 30s java GitHubController 2>&1); then
+            echo "error<<EOF" >> $GITHUB_OUTPUT
+            echo "$OUTPUT" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+          PSEUDO=$(echo "$OUTPUT" | grep "^PSEUDONYM:" | cut -d' ' -f2)
+          COLLISIONS=$(echo "$OUTPUT" | grep "^COLLISIONS:" | cut -d' ' -f2)
+
+          echo "pseudonym=$PSEUDO" >> $GITHUB_OUTPUT
+          echo "collisions=$COLLISIONS" >> $GITHUB_OUTPUT
+
+      - name: Report results to student repo
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.CLASSROOM_TOKEN }}
+          script: |
+            const [owner, repo] = '${{ github.event.client_payload.repo }}'.split('/');
+            const sha = '${{ github.event.client_payload.sha }}';
+            const compileError = `${{ steps.compile.outputs.error }}`;
+            const evalError = `${{ steps.eval.outputs.error }}`;
+            const error = compileError || evalError;
+            const collisions = '${{ steps.eval.outputs.collisions }}';
+            const pseudonym = '${{ steps.eval.outputs.pseudonym }}';
+
+            let summary;
+            if (compileError) {
+              summary = `❌ **Compilation Failed:**\n\`\`\`\n${compileError}\n\`\`\``;
+            } else if (evalError) {
+              summary = `❌ **Evaluation Failed:**\n\`\`\`\n${evalError}\n\`\`\``;
+            } else {
+              summary = `✅ **Collisions: ${collisions}**\n\nPseudonym: ${pseudonym}\n\n[View Leaderboard](${{ env.LEADERBOARD_URL }})`;
+            }
+
+            await github.rest.checks.create({
+              owner,
+              repo,
+              name: 'Hash Function Evaluation',
+              head_sha: sha,
+              status: 'completed',
+              conclusion: error ? 'failure' : 'success',
+              output: {
+                title: error ? 'Evaluation Failed' : `${pseudonym}: ${collisions} collisions`,
+                summary: summary
+              }
+            });
+
+      - name: Update leaderboard
+        if: steps.eval.outputs.collisions
+        run: |
+          PSEUDO="${{ steps.eval.outputs.pseudonym }}"
+          COLLISIONS="${{ steps.eval.outputs.collisions }}"
+          TIME=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+          python3 << EOF
+          import json
+          with open('leaderboard.json', 'r') as f:
+              data = json.load(f)
+          data = [e for e in data if e['pseudonym'] != '$PSEUDO']
+          data.append({'pseudonym': '$PSEUDO', 'collisions': $COLLISIONS, 'timestamp': '$TIME'})
+          with open('leaderboard.json', 'w') as f:
+              json.dump(data, f, indent=2)
+          EOF
+
+      - name: Commit leaderboard
+        if: steps.eval.outputs.collisions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add leaderboard.json
+          git diff --staged --quiet || git commit -m "🏆 ${{ steps.eval.outputs.pseudonym }}: ${{ steps.eval.outputs.collisions }}"
+          git push
