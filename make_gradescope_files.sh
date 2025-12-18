@@ -4,7 +4,7 @@ echo "Building Autograder..."
 
 zip -r autograder.zip src run_autograder setup.sh
 mkdir -p zips
-mv autograder.zip zips/
+mv autograder.zip out/
 
 echo "---"
-echo "DONE. Find it in the zips directory."
+echo "DONE. Find autograder.zip and MyString.java in the zips directory."

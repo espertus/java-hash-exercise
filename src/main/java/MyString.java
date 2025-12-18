@@ -28,9 +28,10 @@ final class MyString {
     // Do not change anything above this comment.
 
     /**
-     * Returns the pseudonym to display on the leaderboard.
-     * Pseudonyms may be up to 30 characters long and should
-     * contain only alphanumeric characters, space, underscore, and hyphen.
+     * Returns the pseudonym to display on the GitHub leaderboard.
+     * Pseudonyms may be up to 30 characters long and should contain
+     * only alphanumeric characters, space, underscore, and hyphen.
+     * This is not used with Gradescope.
      *
      * @return the pseudonym for the leaderboard
      */

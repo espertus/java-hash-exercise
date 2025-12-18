@@ -26,9 +26,8 @@ cp src/main/java/HashSet.java "$OUTPUT_DIR/src/"
 # Copy corpus
 cp src/main/resources/corpus.txt "$OUTPUT_DIR/"
 
-# Create evaluate.yml with org and repo substituted
-sed -e "s/your-org/$ORG/g" -e "s/hash-contest-leaderboard/$LEADERBOARD_REPO/g" \
-  github-classroom-files/evaluate.yml > "$OUTPUT_DIR/.github/workflows/evaluate.yml"
+# Create update-leaderboard
+cp github-classroom-files/update-leaderboard.yml "$OUTPUT_DIR/.github/workflows/"
 
 # Create index.html with org and repo substituted
 sed -e "s/your-org/$ORG/g" -e "s/hash-contest-leaderboard/$LEADERBOARD_REPO/g" \
@@ -86,7 +85,7 @@ This repository evaluates student hash function submissions and maintains the le
 
 ## Setup
 
-1. Upgrade the repo's organization to GitHub Team.
+1. Upgrade this repo's organization to GitHub Team.
    1. Navigate to [https://education.github.com/](https://education.github.com/).
    2. Click on **Upgrade to GitHub Team**.
    3. Click on **Upgrade** next to the name of the organization.
@@ -98,31 +97,7 @@ This repository evaluates student hash function submissions and maintains the le
    4. Under **Branch**, select your main branch and then select \`/docs\` from the folder dropdown.
    5. Click **Save**.
 
-3. Upgrade the organization.
-   1. Go to [https://education.github.com/globalcampus/teacher](https://education.github.com/globalcampus/teacher).
-   2. Click the button **Upgrade to GitHub Team**.
-   3. Select the organization.
-
-4. Generate and store the classroom token.
-   1. Click on your profile picture, then **Settings**.
-   2. In the left sidebar, click **Developer settings**.
-   3. Expand **Personal access tokens**.
-   4. Click on **Tokens (classic)**.
-   5. Click on **Generate new token**.
-   6. From the dropdown menu, select **Generate new token (classic)**.
-   7. Fill in these values:
-     - **Note:** \`Hash Contest Classroom\`
-     - **Expiration:** the day after the scheduled activity or the end of the semester
-     - **Scopes:** \`repo\`
-   8. Click **Generate token**.
-   9. Copy the token, which will not be available later.
-   10. From your leaderboard repo, go to **Settings > Secrets and variables > Actions**.
-   11. Select **New repository secret**, with these options:
-      - **Name:** \`CLASSROOM_TOKEN\`
-      - **Secret:** paste the token
-   12. Select **Add secret**.
-
-5. Generate and store the leaderboard token.
+3. Generate the leaderboard token.
    1. Click on your profile picture, then **Settings**.
    2. In the left sidebar, click **Developer settings**.
    3. Expand **Personal access tokens**.
@@ -139,21 +114,21 @@ This repository evaluates student hash function submissions and maintains the le
         3. Within the new **Contents** section, select \`Access: Read and write\`.
         4. There will also be a **Metadata** section, which you should leave as is.
    6. Click **Generate token**.
-   7. Copy the token, which will not be available later.
-   8. From your organization, go to **Settings > Secrets and variables > Actions**.
-   9. Select **New organization secret**, with these options:
-      - **Name:** \`LEADERBOARD_TOKEN\`
-      - **Secret:** paste the token
-      - **Repository access:** \`All repositories\`
-   10. Select **Add secret**.
+   7. Copy the token, which you will use in place of \`<token>\` in the next step.
+
+4. Run \`make_student_autograder.sh $ORG $LEADERBOARD_REPO <token>\` to generate the autograder workflow.
+
+5. In GitHub Classroom, create an assignment:
+   - Use a template repo containing only \`MyString.java\`.
+   - Under **Grading and feedback**, select **Custom YAML**.
+   - Paste in the contents of \`student-autograder.yml\`.
 
 ## How it works
 
 1. Student pushes \`MyString.java\` to their private repo.
-2. Their workflow triggers \`repository_dispatch\` on this repo.
-3. This repo fetches their \`MyString.java\`, compiles it, and runs it.
-4. Results are posted as a ✅ or ❌ check on the student's commit.
-5. The leaderboard is updated.
+2. GitHub Classroom runs the autograder, which compiles and evaluates locally.
+3. Results are shown in the student's Actions tab.
+4. The autograder triggers this repo to update the leaderboard.
 
 ## Leaderboard
 
