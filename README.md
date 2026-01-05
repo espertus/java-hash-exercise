@@ -1,16 +1,15 @@
 # Java Hash Exercise
 
-This is an autograder for an in-class exercise on hash functions that I created
-for CS 2510: Fundamentals of Computer Science 2 at Mills College at Northeastern
-University. Its purpose is to:
+This material scaffolds an in-class exercise on writing Java `hashCode()` functions.
+Its purposes are:
 
-* illustrate how user-written hash functions affect hash set performance
-* challenge students to think about what makes a good hash function for a given
+* illustrating how user-written hash functions affect hash set performance
+* challenging students to think about what makes a good hash function for a given
   corpus
 
 ## Classroom use
 
-The recommended usage is:
+The recommended usage (supported by these [PowerPoint slides](java-hash-exercise.pptx)) is:
 
 1. Going over the implementation of [HashSet.java](src/main/java/HashSet.java)
    with students, showing them how the `hashCode()` function is used.
@@ -64,6 +63,7 @@ Here are ideas for customizing the assignment:
    another corpus, such as the names of your students or a list of courses
    offered at your university.
 2. De-generifying `HashSet` to simplify the code.
+3. Replacing `MyString` with a class students have used for another assignment.
 
 ## Recommended Reading
 
