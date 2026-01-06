@@ -11,3 +11,6 @@ classes/
 zips/
 *.iml
 $tmp/
+
+leaderboard-repo/
+student-autograder.yml
