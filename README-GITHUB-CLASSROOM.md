@@ -19,6 +19,8 @@ You will create:
 3. Click **Upgrade** next to your organization's name. (If you don't see the organization, that means
    it's already upgraded.)
 
+![screenshot illustrating steps 2-3](images/upgrade-organization.png)
+
 ## Step 2: Create the Leaderboard Repo
 
 1. Create a new **public** repo (e.g., `java-hash-ex-leaderboard`) on GitHub
@@ -101,7 +103,7 @@ This creates `student-autograder.yml` in the current directory.
 2. Modify `MyString.java` by changing the pseudonym and implementing `hashCode()`.
 3. Add, commit, and push the changes.
 4. Check the **Actions** tab on GitHub for the results (which may take a minute).
-5. Verify the leaderboard updates at `https://<org>.github.io/<leaderboard-repo>/`
+5. Verify the leaderboard updates at `https://<org>.github.io/<leaderboard-repo>/`.
 
 ## How It Works
 
