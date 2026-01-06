@@ -55,6 +55,10 @@ which can be summarized as follows:
        a [sample-submissions](sample-submissions)
        subdirectory.
 
+## Creating a GitHub Classroom assignment
+
+See https://github.com/espertus/java-hash-exercise/tree/github.
+
 ## Customizations
 
 Here are ideas for customizing the assignment:
@@ -75,3 +79,7 @@ The [Java 1 `String.hashCode()` implementation](
 https://github.com/barismeral/Java-JDK-1.0-src/blob/master/src/java/lang/String.java)
 is an interesting historical relic that has the curious
 property of O(1) runtime.
+
+## Updates
+
+For updates, see https://github.com/espertus/java-hash-exercise.
