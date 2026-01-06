@@ -1,12 +1,14 @@
 # Java Hash Exercise
 
-This is an autograder for an in-class exercise on hash functions that I created
-for CS 2510: Fundamentals of Computer Science 2 at Mills College at Northeastern
+This is an in-class exercise on hash functions that created at Northeastern
 University. Its purpose is to:
 
 * illustrate how user-written hash functions affect hash set performance
 * challenge students to think about what makes a good hash function for a given
   corpus
+
+It can be used with Gradescope or GitHub Classroom, and we are working on a
+Pawtograder version.
 
 ## Classroom use
 
@@ -43,7 +45,7 @@ assignment](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id
 which can be summarized as follows:
 
 1. Download `autograder.zip` from the latest release or build your zip file
-   by cloning this repository and running `./make_autograder.sh`.
+   by cloning this repository and running `./make_gradescope_autograder.sh`.
 2. Create
    a [Programming Assignment](https://help.gradescope.com/article/ujutnle52h-instructor-assignment-programming)
    on Gradescope, enabling a leaderboard.

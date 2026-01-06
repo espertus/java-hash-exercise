@@ -7,4 +7,4 @@ mkdir -p zips
 mv autograder.zip out/
 
 echo "---"
-echo "DONE. Find autograder.zip and MyString.java in the zips directory."
+echo "DONE. Find autograder.zip and MyString.java in the out directory."
