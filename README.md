@@ -44,8 +44,8 @@ Follow [video instructions to create a Gradescope
 assignment](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e634c84d-611f-4958-a79e-b011012b70c5),
 which can be summarized as follows:
 
-1. Download `autograder.zip` from the latest release or build your zip file
-   by cloning this repository and running `./make_gradescope_autograder.sh`.
+1. Download `autograder.zip` from the [latest release](https://github.com/espertus/java-hash-exercise/releases)
+   or build the zip file by cloning this repository and running `./make_gradescope_autograder.sh`.
 2. Create
    a [Programming Assignment](https://help.gradescope.com/article/ujutnle52h-instructor-assignment-programming)
    on Gradescope, enabling a leaderboard.
@@ -66,9 +66,8 @@ See [README-GITHUB-CLASSROOM.md](README-GITHUB-CLASSROOM.md).
 
 Here are ideas for customizing the assignment:
 
-1. Replacing the corpus (currently a list of winners of SIGCSE prizes) with
-   another corpus, such as the names of your students or a list of courses
-   offered at your university.
+1. Replacing the [corpus](src/main/resources/corpus.txt), such as using the names
+   of your students or a list of courses offered at your university.
 2. De-generifying `HashSet` to simplify the code.
 3. Replace `MyString` with a class students have used for another assignment.
 
