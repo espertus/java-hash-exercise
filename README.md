@@ -57,7 +57,7 @@ which can be summarized as follows:
 
 ## Creating a GitHub Classroom assignment
 
-See https://github.com/espertus/java-hash-exercise/tree/github.
+See https://github.com/espertus/java-hash-exercise.
 
 ## Customizations
 
