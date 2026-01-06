@@ -40,10 +40,10 @@ jobs:
 
       - name: Download evaluation code
         run: |
-          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/main/src/AbstractController.java" -o AbstractController.java
-          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/main/src/GitHubController.java" -o GitHubController.java
-          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/main/src/HashSet.java" -o HashSet.java
-          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/main/corpus.txt" -o corpus.txt
+          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/refs/heads/main/src/AbstractController.java" -o AbstractController.java
+          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/refs/heads/main/src/GitHubController.java" -o GitHubController.java
+          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/refs/heads/main/src/HashSet.java" -o HashSet.java
+          curl -sfL "https://raw.githubusercontent.com/\${{ env.ORG }}/\${{ env.LEADERBOARD_REPO }}/refs/heads/main/corpus.txt" -o corpus.txt
 
       - name: Compile
         id: compile
@@ -100,7 +100,3 @@ jobs:
 EOF
 
 echo "Created student-autograder.yml"
-echo "When creating the GitHub Classroom assignment,"
-echo "paste it as a Custom YAML autograder."
-
-

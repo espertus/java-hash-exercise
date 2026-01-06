@@ -56,6 +56,10 @@ which can be summarized as follows:
        a [sample-submissions](sample-submissions)
        subdirectory.
 
+## Creating the GitHub Classroom assignment
+
+See [README-GITHUB-CLASSROOM.md](README-GITHUB-CLASSROOM.md).
+
 ## Customizations
 
 Here are ideas for customizing the assignment:
@@ -64,6 +68,7 @@ Here are ideas for customizing the assignment:
    another corpus, such as the names of your students or a list of courses
    offered at your university.
 2. De-generifying `HashSet` to simplify the code.
+3. Replace `MyString` with a class students have used for another assignment.
 
 ## Recommended Reading
 

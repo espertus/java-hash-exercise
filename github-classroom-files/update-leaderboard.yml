@@ -1,0 +1,38 @@
+name: Update Leaderboard
+
+on:
+  repository_dispatch:
+    types: [submission]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update leaderboard
+        run: |
+          PSEUDO="${{ github.event.client_payload.pseudonym }}"
+          COLLISIONS="${{ github.event.client_payload.collisions }}"
+          TIME=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+          python3 << EOF
+          import json
+          with open('leaderboard.json', 'r') as f:
+              data = json.load(f)
+          data = [e for e in data if e['pseudonym'] != '$PSEUDO']
+          data.append({'pseudonym': '$PSEUDO', 'collisions': $COLLISIONS, 'timestamp': '$TIME'})
+          with open('leaderboard.json', 'w') as f:
+              json.dump(data, f, indent=2)
+          EOF
+
+      - name: Commit leaderboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add leaderboard.json
+          git diff --staged --quiet || git commit -m "🏆 ${{ github.event.client_payload.pseudonym }}: ${{ github.event.client_payload.collisions }}"
+          git push
