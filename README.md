@@ -89,9 +89,10 @@ For updates, see https://github.com/espertus/java-hash-exercise.
 
 ## Licenses
 
-All files in this archive are in the public domain, except for [gradlew](gradlew) and [gradlew.bat](gradlew.bat),
+Files [gradlew](gradlew), [gradlew.bat](gradlew.bat),
+and [gradle/wrapper/gradle-wrapper.jar](gradle/wrapper/gradle-wrapper.jar),
 which are distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+All other files are dedicated to the public domain under the CC0 1.0 Universal waiver.
 
-This document is dedicated to the public domain under the CC0 1.0 Universal waiver.
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)

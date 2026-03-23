@@ -1,4 +1,11 @@
+// SPDX-License-Identifier: CC0-1.0
+// This file is dedicated to the public domain under the CC0 1.0 Universal waiver.
+// See https://creativecommons.org/publicdomain/zero/1.0/
+
 import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 public class HashExercise {

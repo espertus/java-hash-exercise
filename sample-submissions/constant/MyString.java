@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: CC0-1.0
+// This file is dedicated to the public domain under the CC0 1.0 Universal waiver.
+// See https://creativecommons.org/publicdomain/zero/1.0/
 class MyString {
     private final String s;
 
