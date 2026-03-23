@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
 # Java Hash Exercise
 
 This material scaffolds an in-class exercise on writing Java `hashCode()` functions.
@@ -29,6 +30,8 @@ public int hashCode(){
    challenge them to write a better hash function without calling any existing
    implementations of `hashCode()`. (It is up to you whether to provide any
    examples of good hash functions or allow them access to online resources.)
+   You may remove the licensing information from the start of the source code,
+   as all these files are in the public domain.
 4. Having students submit their files to a Gradescope assignment you create for
    immediate feedback on the number of collisions their function causes on a
    hidden (or visible) corpus.
@@ -83,3 +86,9 @@ property of O(1) runtime.
 ## Updates
 
 For updates, see https://github.com/espertus/java-hash-exercise.
+
+---
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+This document is dedicated to the public domain under the CC0 1.0 Universal waiver.
