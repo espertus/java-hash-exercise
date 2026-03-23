@@ -31,7 +31,7 @@ public int hashCode(){
    implementations of `hashCode()`. (It is up to you whether to provide any
    examples of good hash functions or allow them access to online resources.)
    You may remove the licensing information from the start of the source code,
-   as all these files are in the public domain.
+   as they are in the public domain.
 4. Having students submit their files to a Gradescope assignment you create for
    immediate feedback on the number of collisions their function causes on a
    hidden (or visible) corpus.
@@ -87,7 +87,10 @@ property of O(1) runtime.
 
 For updates, see https://github.com/espertus/java-hash-exercise.
 
----
+## Licenses
+
+All files in this archive are in the public domain, except for [gradlew](gradlew) and [gradlew.bat](gradlew.bat),
+which are distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
